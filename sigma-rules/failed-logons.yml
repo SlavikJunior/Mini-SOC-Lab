@@ -1,0 +1,21 @@
+title: Multiple Failed Logons From a Single Source IP
+id: 3b9e17ac-7b30-4a5a-8c2f-7e2e9f8d0011
+status: experimental
+description: Detects an individual failed Windows logon event. Correlation of repeated events by source IP should be implemented in the SIEM or backend.
+author: Mini SOC Lab
+date: 2026/10/21
+logsource:
+    product: windows
+    service: security
+detection:
+    selection:
+        EventID: 4625
+    condition: selection
+falsepositives:
+    - Mistyped passwords
+    - Service accounts with outdated credentials
+    - Authorized password testing
+level: low
+tags:
+    - attack.credential-access
+    - attack.t1110
