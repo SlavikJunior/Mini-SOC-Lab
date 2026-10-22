@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mini-soc-lab"
+version = "1.0.0"
+description = "Учебный SOC-анализатор: детекции Windows/Linux/Web событий с MITRE ATT&CK маппингом"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "Mini SOC Lab" }]
+keywords = ["soc", "detection", "sigma", "mitre-attack", "incident-response", "security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Topic :: Security",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4", "mypy>=1.10"]
+sigma = ["pySigma>=0.30", "sigma-cli"]
+
+[project.scripts]
+mini-soc-lab = "mini_soc_lab.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mini_soc_lab"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+files = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
