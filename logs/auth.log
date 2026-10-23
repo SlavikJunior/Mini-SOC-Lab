@@ -1,0 +1,18 @@
+Oct 23 08:59:02 LAB-UBU01 sshd[2210]: Accepted publickey for deploy from 192.0.2.10 port 49152 ssh2: RSA SHA256:demo
+Oct 23 09:00:31 LAB-UBU01 sudo[2221]: deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/usr/bin/systemctl status nginx
+Oct 23 09:10:11 LAB-UBU01 sshd[2214]: Connection closed by 192.0.2.30 port 49010 [preauth]
+Oct 23 11:12:05 LAB-UBU01 sshd[3000]: Failed password for invalid user root from 203.0.113.201 port 1024 ssh2
+Oct 23 11:12:16 LAB-UBU01 sshd[3001]: Failed password for admin from 203.0.113.201 port 1031 ssh2
+Oct 23 11:12:27 LAB-UBU01 sshd[3002]: Failed password for invalid user root from 203.0.113.201 port 1038 ssh2
+Oct 23 11:12:38 LAB-UBU01 sshd[3003]: Failed password for oracle from 203.0.113.201 port 1045 ssh2
+Oct 23 11:12:49 LAB-UBU01 sshd[3004]: Failed password for postgres from 203.0.113.201 port 1052 ssh2
+Oct 23 11:12:00 LAB-UBU01 sshd[3005]: Failed password for root from 203.0.113.201 port 1059 ssh2
+Oct 23 11:13:11 LAB-UBU01 sshd[3006]: Failed password for ubuntu from 203.0.113.201 port 1066 ssh2
+Oct 23 11:13:22 LAB-UBU01 sshd[3007]: Failed password for test from 203.0.113.201 port 1073 ssh2
+Oct 23 11:13:33 LAB-UBU01 sshd[3008]: Failed password for dev from 203.0.113.201 port 1080 ssh2
+Oct 23 11:13:44 LAB-UBU01 sshd[3009]: Failed password for root from 203.0.113.201 port 1087 ssh2
+Oct 23 11:13:55 LAB-UBU01 sshd[3010]: Failed password for adm from 203.0.113.201 port 1094 ssh2
+Oct 23 11:13:06 LAB-UBU01 sshd[3011]: Failed password for user1 from 203.0.113.201 port 1101 ssh2
+Oct 23 11:14:21 LAB-UBU01 sshd[3132]: Accepted password for ops from 203.0.113.201 port 41832 ssh2
+Oct 23 11:20:05 LAB-UBU01 sudo[3140]: ops : 3 incorrect password attempts ; TTY=pts/2 ; PWD=/home/ops ; USER=root ; COMMAND=/bin/su
+Oct 23 11:22:15 LAB-UBU01 sudo[3145]: ops : user NOT in sudoers ; TTY=pts/2 ; PWD=/home/ops ; USER=root ; COMMAND=/bin/rm -rf /var/log
