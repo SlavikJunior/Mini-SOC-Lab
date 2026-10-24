@@ -33,7 +33,8 @@ python -m pip install -e ".[dev]"
 # анализ всех трёх источников (JSON в stdout)
 mini-soc-lab analyze
 
-# самодостаточный HTML-отчёт
+# самодостаточный HTML-отчёт (дашборд: карточки, timeline, bar-charts,
+# переключатели темы и языка EN/РУ — встроенные, без внешних зависимостей)
 mini-soc-lab analyze --format html --output analysis/generated-report.html
 
 # один источник или свой порог
